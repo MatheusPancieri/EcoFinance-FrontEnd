@@ -1,0 +1,255 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif; /* Updated font family */
+    background: linear-gradient(135deg, #2d2d2d, #c72c48, #f4c542);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Animation for gradient background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Class for applying the Anton font */
+.font-anton {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Styling for the main container */
+.main-container {
+    display: flex;
+    height: 80vh; /* Adjust height as needed */
+    width: 80vw; /* Adjust width as needed */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the image section */
+.image-section {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.5); /* Optional background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-section .logo {
+    max-width: 100%; /* Adjust size as needed */
+    height: auto;
+    transform: perspective(1000px) rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg));
+    transition: transform 0.2s ease;
+}
+
+/* Styling for the form section */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background: rgb(26, 26, 26); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.253);
+    width: 100%;
+    max-width: 500px; /* Adjust size as needed */
+}
+
+/* Header styling for the form */
+.login-form h1 {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #c72c48;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #b71c40;
+}
+
+/* Error message styling */
+.error-message {
+    color: #c80000;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.password-wrapper i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Forgot password styling */
+.forgot-password {
+    margin-bottom: 20px;
+    margin-top: 3px;
+    text-align: left;
+}
+
+.forgot-password a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.no-account {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    text-align: left;
+}
+.no-account a {
+    text-decoration: none;
+    
+}
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Loading spinner styling */
+.loading-spinner {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.loading-spinner::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    border-top: 3px solid #c72c48;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animation for the logo movement */
+.image-section:hover .logo {
+    transform: perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+}
+
+
+/* 
+-----------------------
+    STYLY DO SING IN 
+-----------------------
+*/
+
+/* Estilos para a página de Sign Up */
+.sign-up-form {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.sign-up-form h1 {
+    color: #ddd;
+    padding-bottom: 10px;
+}
+
+.sign-up-form h2 {
+    color: #ddd;
+}
+.sign-up-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #c72c48;
+    color: #ddd;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sign-up-button:hover {
+    background-color: #c72c48;
+}
+
+.already-account {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.already-account a {
+    color: #c72c48;
+    text-decoration: none;
+}
+
+.already-account a:hover {
+    text-decoration: underline;
+}
