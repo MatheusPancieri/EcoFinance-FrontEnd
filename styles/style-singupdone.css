@@ -5,12 +5,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    --black-light: #2d2d2d;
+    --red-pink: #c72c48;
+    --yellow-dark: #f4c542;
+    --white-good: #ddd;
+    --gradient-website: linear-gradient(135deg, #2d2d2d, #c72c48, #f4c542);
+}
+
 body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Roboto', sans-serif; /* Updated font family */
+    font-family: 'Roboto', sans-serif;
+    /* Updated font family */
     background: linear-gradient(135deg, #2d2d2d, #c72c48, #f4c542);
     background-size: 300% 300%;
     animation: gradientAnimation 15s ease infinite;
@@ -18,13 +27,23 @@ body {
 
 /* Animation for gradient background */
 @keyframes gradientAnimation {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
 }
+
 /* Caixa centralizada para a página de conclusão de cadastro */
 .signindone-container {
-    background-color: #000; /* Fundo preto */
+    background-color: rgb(37, 37, 37);
+    /* Fundo preto */
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
@@ -36,18 +55,21 @@ body {
 /* Título e Parágrafo da página de conclusão de cadastro */
 .signindone-container h1 {
     font-family: 'Anton', sans-serif;
-    color: #ddd; /* Texto branco */
+    color: #ddd;
+    /* Texto branco */
     margin-bottom: 20px;
 }
 
 .signindone-container p {
-    color: #ddd; /* Texto branco */
+    color: #ddd;
+    /* Texto branco */
     font-size: 16px;
     margin-bottom: 20px;
 }
 
 .signindone-container a {
-    color: #c72c48; /* Cor do link */
+    color: #c72c48;
+    /* Cor do link */
     text-decoration: none;
 }
 

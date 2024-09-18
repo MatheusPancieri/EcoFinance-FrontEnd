@@ -5,13 +5,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --black-light: #2d2d2d;
+    --red-pink: #c72c48;
+    --yellow-dark: #f4c542;
+    --white-good: #ddd;
+    --gradient-website: linear-gradient(135deg, #2d2d2d, #c72c48, #f4c542);
+}
+
 /* Basic styling for the body */
 body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Roboto', sans-serif; /* Updated font family */
+    font-family: 'Roboto', sans-serif;
+    /* Updated font family */
     background: linear-gradient(135deg, #2d2d2d, #c72c48, #f4c542);
     background-size: 300% 300%;
     animation: gradientAnimation 15s ease infinite;
@@ -19,9 +28,17 @@ body {
 
 /* Animation for gradient background */
 @keyframes gradientAnimation {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 /* Class for applying the Anton font */
@@ -32,8 +49,10 @@ body {
 /* Styling for the main container */
 .main-container {
     display: flex;
-    height: 80vh; /* Adjust height as needed */
-    width: 80vw; /* Adjust width as needed */
+    height: 80vh;
+    /* Adjust height as needed */
+    width: 80vw;
+    /* Adjust width as needed */
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
@@ -42,7 +61,8 @@ body {
 /* Styling for the image section */
 .image-section {
     flex: 1;
-    background: rgba(0, 0, 0, 0.5); /* Optional background */
+    background: rgba(0, 0, 0, 0.5);
+    /* Optional background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +70,8 @@ body {
 }
 
 .image-section .logo {
-    max-width: 100%; /* Adjust size as needed */
+    max-width: 100%;
+    /* Adjust size as needed */
     height: auto;
     transform: perspective(1000px) rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg));
     transition: transform 0.2s ease;
@@ -65,12 +86,14 @@ body {
 }
 
 .login-form {
-    background: rgb(26, 26, 26); /* Semi-transparent background */
+    background: rgb(37, 37, 37);
+    /* Semi-transparent background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.253);
     width: 100%;
-    max-width: 500px; /* Adjust size as needed */
+    max-width: 500px;
+    /* Adjust size as needed */
 }
 
 /* Header styling for the form */
@@ -111,17 +134,18 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    transition: .5s;
 }
 
 .login-button:hover {
-    background-color: #b71c40;
+    background-color: #861b34;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
 }
 
 /* Error message styling */
-.error-message {
+.error {
     color: #c80000;
-    margin-top: 10px;
-    text-align: center;
 }
 
 
@@ -157,6 +181,7 @@ body {
     text-decoration: none;
     font-size: 14px;
 }
+
 .no-account {
     color: #fff;
     font-size: 14px;
@@ -164,10 +189,16 @@ body {
     margin-top: 5px;
     text-align: left;
 }
+
 .no-account a {
     text-decoration: none;
-    
+    color: #c72c48;
 }
+
+.no-account a:hover {
+    text-decoration: underline;
+}
+
 .forgot-password a:hover {
     text-decoration: underline;
 }
@@ -191,8 +222,13 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Animation for the logo movement */
@@ -213,18 +249,23 @@ body {
     max-width: 450px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: rgb(26, 26, 26);
+    background: rgb(37, 37, 37);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
+
 .sign-up-form h1 {
     color: #ddd;
     padding-bottom: 10px;
+    font-size: 16px;
 }
 
-.sign-up-form h2 {
+.sign-up-form p {
     color: #ddd;
+    text-align: left;
+    font-size: 16px;
 }
+
 .sign-up-button {
     width: 100%;
     padding: 0.8rem;
@@ -237,7 +278,7 @@ body {
 }
 
 .sign-up-button:hover {
-    background-color: #c72c48;
+    background-color: #981a31;
 }
 
 .already-account {
@@ -252,4 +293,12 @@ body {
 
 .already-account a:hover {
     text-decoration: underline;
+}
+
+/*---------------------VERIFICAÇÃO DE EXEÇÕES---------------------*/
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
 }

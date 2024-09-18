@@ -1,3 +1,4 @@
+
 // Seleciona a seção da imagem e adiciona o listener de mousemove
 var imageSection = document.querySelector('.image-section');
 if (imageSection) {
@@ -24,12 +25,12 @@ if (imageSection) {
 }
 
 // Função para alternar a visibilidade da senha
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var passwordInput = document.getElementById('password');
     var togglePassword = document.getElementById('togglePassword');
 
     if (passwordInput && togglePassword) {
-        togglePassword.addEventListener('click', function() {
+        togglePassword.addEventListener('click', function () {
             // Alterna o tipo de input entre 'password' e 'text'
             var type = passwordInput.type === 'password' ? 'text' : 'password';
             passwordInput.type = type;
@@ -40,12 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-document.getElementById('signUpForm').addEventListener('submit', function(event) {
+document.getElementById('signUpForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Impede o envio real do formulário
 
     // Simulação de processamento de cadastro
-    setTimeout(function() {
+    setTimeout(function () {
         // Redireciona para a página de sucesso após o cadastro
         window.location.href = 'singUpDone.html';
     }, 1000); // Simula um pequeno atraso para parecer que está processando
 });
+

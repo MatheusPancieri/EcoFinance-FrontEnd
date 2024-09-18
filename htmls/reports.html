@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <nav class="menu-lateral">
+        <ul>
+            <li class="item-menu">
+                <a href="/htmls/index.html">
+                    <span class="icon"><i class="bi bi-house-door-fill"></i></span>
+                </a>
+                <span class="txt-link">Home</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/transactions.html">
+                    <span class="icon"><i class="bi bi-arrow-left-right"></i></span>
+                </a>
+                <span class="txt-link">Transactions</span>
+            </li>
+            <li class="item-menu  ativo">
+                <a href="/htmls/category.html">
+                    <span class="icon"><i class="bi bi-tags-fill"></i></span>
+                </a>
+                <span class="txt-link">Categories</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/goals.html">
+                    <span class="icon"><i class="bi bi-award-fill"></i></span>
+                </a>
+                <span class="txt-link">Goals</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/reports.html">
+                    <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                </a>
+                <span class="txt-link">Reports</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/investments.html">
+                    <span class="icon"><i class="bi bi-cash-coin"></i></span>
+                </a>
+                <span class="txt-link">Investments</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/settings.html">
+                    <span class="icon"><i class="bi bi-gear-fill"></i></span>
+                </a>
+                <span class="txt-link">Settings</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/profile.html">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                </a>
+                <span class="txt-link">Profile</span>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Relatórios</h1>
+        <button class="btn btn-primary" id="add-report-btn">Adicionar Novo Relatório</button>
+
+        <div class="report-list">
+            <div class="report-item">
+                <h3>Relatório 1</h3>
+                <p>Descrição do relatório 1</p>
+            </div>
+            <!-- Adicione mais relatórios conforme necessário -->
+        </div>
+
+        <!-- Modal para adicionar relatório -->
+        <div class="modal" id="report-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Adicionar Novo Relatório</h2>
+                <form id="report-form">
+                    <div class="mb-3">
+                        <label for="report-title" class="form-label">Título do Relatório</label>
+                        <input type="text" class="form-control" id="report-title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="report-description" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="report-description" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar Relatório</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/report.js"></script>
+</body>
+
+</html>

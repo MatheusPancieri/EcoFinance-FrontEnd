@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+
+    <!-- Menu Lateral -->
+    <nav class="menu-lateral">
+        <ul>
+            <li class="item-menu">
+                <a href="/htmls/index.html">
+                    <span class="icon"><i class="bi bi-house-door-fill"></i></span>
+                </a>
+                <span class="txt-link">Home</span>
+            </li>
+            <li class="item-menu ativo">
+                <a href="/htmls/transactions.html">
+                    <span class="icon"><i class="bi bi-arrow-left-right"></i></span>
+                </a>
+                <span class="txt-link">Transactions</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/category.html">
+                    <span class="icon"><i class="bi bi-tags-fill"></i></span>
+                </a>
+                <span class="txt-link">Categories</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/goals.html">
+                    <span class="icon"><i class="bi bi-award-fill"></i></span>
+                </a>
+                <span class="txt-link">Goals</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/reports.html">
+                    <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                </a>
+                <span class="txt-link">Reports</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/investments.html">
+                    <span class="icon"><i class="bi bi-cash-coin"></i></span>
+                </a>
+                <span class="txt-link">Investments</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/settings.html">
+                    <span class="icon"><i class="bi bi-gear-fill"></i></span>
+                </a>
+                <span class="txt-link">Settings</span>
+            </li>
+            <li class="item-menu">
+                <a href="/htmls/profile.html">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                </a>
+                <span class="txt-link">Profile</span>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Conteúdo da Página de Transações -->
+    <div class="content">
+        <h1>Transações</h1>
+
+        <!-- Filtros -->
+        <div class="filtros">
+            <label for="filtro-mes">Mês:</label>
+            <select id="filtro-mes">
+                <option value="todos">Todos</option>
+                <option value="janeiro">Janeiro</option>
+                <option value="fevereiro">Fevereiro</option>
+                <!-- Adicione mais meses aqui -->
+            </select>
+
+            <label for="filtro-categoria">Categoria:</label>
+            <select id="filtro-categoria">
+                <option value="todas">Todas</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="contas">Contas</option>
+                <option value="receitas">Receitas</option>
+                <!-- Adicione mais categorias aqui -->
+            </select>
+
+            <button id="filtrar-btn">Filtrar</button>
+        </div>
+
+        <!-- Botão Adicionar Transação -->
+        <button id="add-transacao-btn" class="btn-adicionar">Adicionar Nova Transação</button>
+
+        <!-- Bloco de Transações -->
+        <div class="transactions-block">
+            <!-- Item de Transação 1 -->
+            <div class="transaction-item">
+                <div class="transaction-header">
+                    <h2>Compra no Supermercado</h2>
+                    <span class="transaction-date">12/09/2024</span>
+                </div>
+                <div class="transaction-details">
+                    <p>Valor: R$ 150,00</p>
+                    <p>Categoria: Alimentação</p>
+                    <button class="editar-btn">Editar</button>
+                    <button class="excluir-btn">Excluir</button>
+                </div>
+            </div>
+
+            <!-- Mais transações -->
+        </div>
+    </div>
+
+    <!-- Modal para Adicionar/Editar Transação -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2 id="modal-title">Adicionar Transação</h2>
+            <form id="transacao-form">
+                <label for="data-transacao">Data:</label>
+                <input type="date" id="data-transacao" name="data-transacao">
+
+                <label for="valor-transacao">Valor:</label>
+                <input type="number" id="valor-transacao" name="valor-transacao" placeholder="R$ 0,00">
+
+                <label for="categoria-transacao">Categoria:</label>
+                <select id="categoria-transacao" name="categoria-transacao">
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="contas">Contas</option>
+                    <option value="receitas">Receitas</option>
+                    <!-- Adicionar mais categorias -->
+                </select>
+
+                <label for="descricao-transacao">Descrição (Opcional):</label>
+                <textarea id="descricao-transacao" name="descricao-transacao"></textarea>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/scripts/transaction.js"></script>
+</body>
+
+</html>
